@@ -70,7 +70,7 @@ namespace _2023.Days
             foreach (var calibrationLine in calibrationDocument)
             {
                 var numberOnly = Regex.Replace(calibrationLine, "[^0-9.]", "");
-                var numberArray = numberOnly.Where(c => Char.IsDigit(c)).Select(c => c.ToString()).ToArray();
+                var numberArray = numberOnly.Where(c => char.IsDigit(c)).Select(c => c.ToString()).ToArray();
                 var finalNumber = "0";
                 if (numberArray.Length > 1)
                 {
@@ -111,7 +111,7 @@ namespace _2023.Days
                     }
 
                     var numberOnly = Regex.Replace(calibrationLine, "[^0-9.]", "");
-                    var numberArray = numberOnly.Where(c => Char.IsDigit(c)).Select(c => c.ToString()).Distinct().ToArray();
+                    var numberArray = numberOnly.Where(c => char.IsDigit(c)).Select(c => c.ToString()).Distinct().ToArray();
 
                     foreach (var number in numberArray)
                     {
